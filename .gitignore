@@ -1,51 +1,116 @@
 ```
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
+# Build artifacts
+*.obj
+*.exe
+*.dll
+*.pdb
+*.nupkg
+*.snupkg
+*.so
+*.dylib
+*.a
+*.lib
+*.o
 
 # Dependencies
-.venv/
-venv/
-__pycache__/
+packages/
 node_modules/
+bower_components/
 
-# Build artifacts
-dist/
-build/
-target/
-
-# Python
-*.pyc
-*.pyo
-*.pyd
-*.so
-*.egg-info/
-.Python
-pip-log.txt
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.db
-*.sqlite
-*.sqlite3
+# Logs
 *.log
-*.tmp
-*.swp
-*.swo
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+desktop.ini
+
+# Visual Studio
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+ipch/
+*.iobj
+*.ipdb
+*.ilk
+
+# Visual Studio Code
+.vscode/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+*.dotCover
+
+# Mono
+mono_crash.*
+
+# Unity
+Library/
+Temp/
+Obj/
+Build/
+Logs/
+MemoryCaptures/
+*.unityproj
+*.meta
+
+# Rider
+.idea/
+*.DotSettings
+*.pidb
+*.userprefs
+
+# JetBrains
+*.iml
+*.iws
+*.idea/
+*.orig
+
+# Build results
+Debug/
+Release/
+x64/
+x86/
+build/
+dist/
+bin/
+obj/
+out/
+
+# Environment specific
+.env
+.env.local
+*.env
+*.local
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Package manager
+.nuget/
+.npm/
+.yarn/
+
+# Configuration
+app.config
+web.config
 ```

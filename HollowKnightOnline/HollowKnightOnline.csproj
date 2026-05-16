@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>HollowKnightOnline</AssemblyName>
+    <RootNamespace>HollowKnightOnline</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- BepInEx Core -->
+    <PackageReference Include="BepInEx.BaseLib" Version="5.4.20" />
+    <PackageReference Include="HarmonyX" Version="2.10.1" />
+    
+    <!-- Networking -->
+    <PackageReference Include="LiteNetLib" Version="1.2.0" />
+    
+    <!-- Hollow Knight References (You need to provide these DLLs) -->
+    <!-- Copy these from Hollow Knight game folder to /libs -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>../libs/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>../libs/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>../libs/UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>../libs/UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(HOLLOW_KNIGHT_PATH)/BepInEx/plugins/" Condition="'$(HOLLOW_KNIGHT_PATH)' != ''" />
+  </Target>
+
+</Project>
